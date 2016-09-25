@@ -216,6 +216,7 @@ td {
 
 header {
 	background-color: #171717;
+  background-image: url("../images/ignasi_pattern_dark.png");
 	color: #FDFDFB;
   width:170px;
   float:left;
@@ -328,11 +329,12 @@ section {
 /* Footer */
 
 footer {
-  width:170px;
+  display: none;
+  /*width:170px;
   float:left;
   position:fixed;
   bottom:10px;
-	padding-left: 50px;
+	padding-left: 50px;*/
 }
 
 @media print, screen and (max-width: 960px) {
