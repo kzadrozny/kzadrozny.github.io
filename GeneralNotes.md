@@ -9,6 +9,7 @@ Ambient noise based on mood and that you can control
 
 ## Writing
 - [GitBook](gitbook.com)
+[Help Docs](https://help.gitbook.com/), [GUI Editor](https://www.gitbook.com/editor), and [GitBook Repo](https://github.com/GitbookIO/gitbook)
 
 # Work Community
 ## Apps
