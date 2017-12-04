@@ -21,5 +21,5 @@ Appointment scheduler/ calendar appt between teams
 
 ## Articles
 ### Onboarding
-- ("Connections, onboarding, and the need to belong")[https://rework.withgoogle.com/blog/connections-onboarding-and-the-need-to-belong/]
-- ("Your New Hires Won’t Succeed Unless You Onboard Them Properly")[https://hbr.org/2017/06/your-new-hires-wont-succeed-unless-you-onboard-them-properly]
+- (Connections, onboarding, and the need to belong)[https://rework.withgoogle.com/blog/connections-onboarding-and-the-need-to-belong/]
+- (Your New Hires Won’t Succeed Unless You Onboard Them Properly)[https://hbr.org/2017/06/your-new-hires-wont-succeed-unless-you-onboard-them-properly]
