@@ -1,8 +1,6 @@
--
- https://wiki.folio.org/display/A11Y/Accessibility+Home
+- https://wiki.folio.org/display/A11Y/Accessibility+Home
 - https://wiki.folio.org/display/A11Y/Resources
--
- https://wiki.folio.org/display/A11Y/Accessibility+SIG+Parking+Lot
+- https://wiki.folio.org/display/A11Y/Accessibility+SIG+Parking+Lot
 
 - How do our checklist get to developers? How do they know what we are shooting for?
 - Should we only focus on the front end devs?
