@@ -2,6 +2,7 @@
 - https://wiki.folio.org/display/A11Y/Resources
 - https://wiki.folio.org/display/A11Y/Accessibility+SIG+Parking+Lot
 
+# First Meeting
 - How do our checklist get to developers? How do they know what we are shooting for?
 - Should we only focus on the front end devs?
 - ADA patrons tend to use IE; check to see if there is a more recent report than 2015
@@ -21,3 +22,12 @@
 https://wiki.folio.org/display/COMMUNITY/Getting+Started+for+Testers
 
 Beth: issues.folio.org and wiki.folio.org share the same username/password database.  You can sign up for a wiki account here:  https://issues.folio.org/secure/Signup!default.jspa -- I don't see an account with that email address.
+
+# March 7th
+- Khalila: explained subject matter expert help
+- WCAG 2.0 AA accessible - possible to aim for 2.1? ( Brought up by Robert from FrontSide ) The developers have reviewed it and decided to aim for 2.0.
+- The descion making process of the developers? Khalila is going to ask John for programmer style guide
+- Front end code: checkbox is being labeled as check box - so there is some clean-up that can be done.
+- No decision on screen readers to support: In the long run the plan is to have FOLIO with the big three, but for testing it will be for Chrome.
+- Accessibility matrix - test in popular combos: The most popular combo is EI11 and Jaws
+- Testing Feedback due on the 14th
