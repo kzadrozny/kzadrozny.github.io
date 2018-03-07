@@ -24,6 +24,14 @@ main {
   margin-top: 2em; }
 
 /*
+ * Fonts
+ * --------------------------------------------------
+ */
+h2 {
+  font-size: 1.2em;
+  font-weight: 100; }
+
+/*
  * Navigation
  * --------------------------------------------------
  */
@@ -101,6 +109,10 @@ nav {
   grid-gap: 30px;
   max-width: 960px;
   margin: 0 auto 30px; }
+  @media (min-width: 48em) {
+    .cards h2 {
+      grid-column-start: 1;
+      grid-column-end: 4; } }
 
 article {
   position: relative;
@@ -112,6 +124,5 @@ article {
   article h3 {
     position: absolute;
     bottom: 0;
-    width: 100%;
-    padding: 10px;
-    background-color: rgba(255, 255, 255, 0.2); }
+    padding: 10px 20px 10px;
+    background-color: rgba(255, 255, 255, 0.7); }
