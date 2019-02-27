@@ -1,12 +1,17 @@
 @import "media.scss";
 
+$main-font: 'Open Sans', sans-serif;
+
+$main-color: #333;
+$accent-color: #806e64;
+
 /*
  * Global
  * --------------------------------------------------
  */
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: $main-font;
 }
 
 .visually-hidden { // For ADA helper text
@@ -26,14 +31,43 @@ main {
  * --------------------------------------------------
  */
 
- h2 {
+h2 {
   font-size: 1.2em;
+  font-weight: 600;
+  color: $accent-color;
+  border-bottom: 1px solid $accent-color;
+}
+
+h3 {
+  font-size: 1.1em;
   font-weight: 100;
- }
+  margin-bottom: 0;
+    h2 + & {
+      margin-top: 0;
+    }
+}
 
- h3 {
+h4 {
+  font-size: 1em;
+  font-weight: 600;
+  margin-bottom: 0;
+}
 
- }
+p {
+  line-height: 1.5em;
+}
+
+ul.plain-list {
+  list-style: none;
+  padding-left: 1.3em;
+  li {
+    padding-left: 1.5em;
+    text-indent: -1.5em;
+  }
+  li + li {
+    margin-top: 1em;
+  }
+}
 
 /*
  * Navigation
@@ -60,10 +94,10 @@ main {
 }
 
 nav {
-  padding: 1em;
+  //padding: 1em;
   font-size: 0.85em;
   color: white;
-  background-color: #333;
+  background-color: $main-color;
   position: fixed;
   top: 0;
   width: 100%;
@@ -94,7 +128,7 @@ nav {
   margin-bottom: 30px;
   padding: 30px;
   color: white;
-  background: url("../../images/hero-gs.jpg") center #333 no-repeat;
+  background: url("../../images/hero-gs.jpg") center $main-color no-repeat;
   background-size: cover;
   color: white;
   text-shadow: 0px 0px 15px #000;
@@ -122,14 +156,14 @@ nav {
 
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
   grid-gap: 30px;
   max-width: 960px;
   margin: 0 auto 30px;
   h2 {
     @include respond-to(small) {
       grid-column-start: 1;
-      grid-column-end: 4;
+      grid-column-end: 3;
     }
   }
 }
@@ -138,16 +172,49 @@ article {
   position: relative;
   z-index: -1;
   img {
-    height: 200px;
+    height: 300px;
     width: 100%;
     object-fit: cover;
   }
   h3 {
+    color: #fff;
+    background-color: rgba(20, 20, 20, 0.9);
     position: absolute;
     bottom: 0;
     padding: 10px 20px 10px;
-    background-color: rgba(255, 255, 255, 0.7);
+    a {
+      color: #fff;
+    }
   }
 }
 
+/*
+ * Other Grids
+ * --------------------------------------------------
+ */
 
+.single-column {
+  display: grid;
+  grid-template-columns: 1fr;
+  max-width: 960px;
+  margin: 0 auto 30px;
+}
+
+.third-column {
+  display: grid;
+  grid-gap: 30px;
+  max-width: 960px;
+  margin: 0 auto 30px;
+  h2 {
+    @include respond-to(small) {
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+  }
+  .left-half {
+    grid-column: 1;
+  }
+  .right-half {
+    grid-column: 2;
+  }
+}
