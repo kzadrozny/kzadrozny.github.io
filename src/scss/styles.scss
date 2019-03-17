@@ -4,6 +4,18 @@ $main-font: 'Open Sans', sans-serif;
 
 $main-color: #333;
 $accent-color: #806e64;
+$pop-color: #477f68;
+$hero-tint: #315848;
+
+@mixin auto-image {
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
+  align-self: end;
+  margin-right: auto;
+  margin-left: auto;
+  grid-column: span 1;
+}
 
 /*
  * Global
@@ -39,7 +51,7 @@ h2 {
 }
 
 h3 {
-  font-size: 1.1em;
+  font-size: 1.2em;
   font-weight: 100;
   margin-bottom: 0;
     h2 + & {
@@ -50,6 +62,7 @@ h3 {
 h4 {
   font-size: 1em;
   font-weight: 600;
+  color: $pop-color;
   margin-bottom: 0;
 }
 
@@ -61,12 +74,21 @@ ul.plain-list {
   list-style: none;
   padding-left: 1.3em;
   li {
-    padding-left: 1.5em;
+    padding-left: 0;
     text-indent: -1.5em;
   }
   li + li {
     margin-top: 1em;
   }
+}
+
+.highlight {
+  font-weight: 600;
+}
+
+.pop {
+  font-weight: 700;
+  color: $pop-color;
 }
 
 /*
@@ -108,7 +130,10 @@ nav {
     li {
       padding-left: 2em;
       &:first-child {
-        padding-left: 7em;
+        padding-left: 3em;
+        @include respond-to(small) {
+          padding-left: 7em;
+        }
       } 
     }
   }
@@ -125,25 +150,28 @@ nav {
 
 .hero {
   height: 20px;
+  margin-right: -15px;
+  margin-left: -15px;
   margin-bottom: 30px;
   padding: 30px;
-  color: white;
-  background: url("../../images/hero-gs.jpg") center $main-color no-repeat;
+  color: $main-color;
+  background: url("../../images/hero-slim.jpg") center $main-color no-repeat;
   background-size: cover;
-  color: white;
-  text-shadow: 0px 0px 15px #000;
+  //text-shadow: 0px 0px 15px #000;
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow:inset 0 0 0 2000px rgba($accent-color,0.6);
   @include respond-to(small) {
     height: 50px;
   }
   p {
     margin-right: 60px;
     font-weight: 100;
+    font-style: italic;
     font-size: 1em;
     @include respond-to(small) {
-      font-size: 2em;
+      font-size: 1.5em;
     }
   }
 }
@@ -156,14 +184,19 @@ nav {
 
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  grid-template-columns: 1fr 1fr;
   grid-gap: 30px;
   max-width: 960px;
   margin: 0 auto 30px;
+  @include respond-to(small) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
   h2 {
+    grid-column-start: 1;
+    grid-column-end: 3;
     @include respond-to(small) {
       grid-column-start: 1;
-      grid-column-end: 3;
+      grid-column-end: 4;
     }
   }
 }
@@ -172,15 +205,18 @@ article {
   position: relative;
   z-index: -1;
   img {
-    height: 300px;
-    width: 100%;
-    object-fit: cover;
+    @include auto-image;
+    @include respond-to(small) {
+      height: 300px;
+      width: 100%;
+      object-fit: cover;
+    }
   }
   h3 {
     color: #fff;
     background-color: rgba(20, 20, 20, 0.9);
     position: absolute;
-    bottom: 0;
+    bottom: 5px;
     padding: 10px 20px 10px;
     a {
       color: #fff;
@@ -200,21 +236,41 @@ article {
   margin: 0 auto 30px;
 }
 
-.third-column {
+.two-column {
   display: grid;
   grid-gap: 30px;
   max-width: 960px;
   margin: 0 auto 30px;
+  @include respond-to(small) {
+    grid-template-columns: 1fr 1fr;
+  }
+  img {
+    @include auto-image;
+  }
+}
+
+.third-column {
+  display: grid;
+  grid-gap: 10px 30px;
+  max-width: 960px;
+  margin: 0 auto 30px;
+  @include respond-to(small) {
+      grid-template-columns: 1fr 2fr;
+  }
   h2 {
     @include respond-to(small) {
       grid-column-start: 1;
       grid-column-end: 3;
     }
   }
-  .left-half {
-    grid-column: 1;
+  img {
+    max-height: 250px;  // need to work with this to be better on mobile
+    @include auto-image;
   }
-  .right-half {
-    grid-column: 2;
+  p {
+    line-height: 1.75rem;
+    &:first-child {
+      margin-top: 0;
+    }
   }
 }
