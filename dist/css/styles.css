@@ -39,6 +39,9 @@ h3 {
   margin-bottom: 0; }
   h2 + h3 {
     margin-top: 0; }
+  #resume h3 {
+    font-family: "Lora", serif;
+    margin-top: 2em; }
 
 h4 {
   font-size: 1em;
@@ -53,10 +56,20 @@ ul.plain-list {
   list-style: none;
   padding-left: 1.3em; }
   ul.plain-list li {
-    padding-left: 0;
+    padding-left: 0.25em;
     text-indent: -1.5em; }
   ul.plain-list li + li {
     margin-top: 1em; }
+
+.descriptor, .project-type {
+  font-family: "Lora", serif;
+  font-size: 0.9rem;
+  font-style: italic; }
+
+.project-type {
+  color: #477f68; }
+  .project-type + h3 {
+    margin-top: 0; }
 
 .highlight {
   font-weight: 600; }
@@ -152,7 +165,8 @@ nav {
       grid-template-columns: 1fr 1fr 1fr; } }
   .cards h2 {
     grid-column-start: 1;
-    grid-column-end: 3; }
+    grid-column-end: 3;
+    margin-bottom: 0; }
     @media (min-width: 48em) {
       .cards h2 {
         grid-column-start: 1;
@@ -175,21 +189,57 @@ article {
         width: 100%;
         object-fit: cover; } }
   article h3 {
-    color: #fff;
-    background-color: rgba(20, 20, 20, 0.9);
-    position: absolute;
-    bottom: 5px;
-    padding: 10px 20px 10px; }
-    article h3 a {
-      color: #fff; }
+    margin-bottom: 0.5em; }
 
 /*
- * Other Grids
+ * Section Styling
+ * --------------------------------------------------
+ */
+#resume h3.first {
+  margin-top: 0; }
+  @media (min-width: 48em) {
+    #resume h3.first {
+      margin-top: 0.5em; } }
+
+#resume .pull-right {
+  display: block;
+  font-size: 0.8rem; }
+  @media (min-width: 48em) {
+    #resume .pull-right {
+      display: unset;
+      float: right;
+      padding-right: 1em; } }
+
+#resume .experience ul {
+  font-family: "Lora", serif; }
+  #resume .experience ul li {
+    margin-bottom: 0.75em; }
+
+#resume .sidebar h3 {
+  font-size: 1rem; }
+
+#resume .sidebar ul {
+  font-size: 0.8rem; }
+
+#about h2 {
+  margin-bottom: 0; }
+
+#about img {
+  max-height: 250px;
+  padding: 1em 0 0 0; }
+  @media (min-width: 48em) {
+    #about img {
+      float: left;
+      padding: 1em 1em 1em 0; } }
+
+section:last-child {
+  padding-bottom: 2em; }
+
+/*
+ * General Grids
  * --------------------------------------------------
  */
 .single-column {
-  display: grid;
-  grid-template-columns: 1fr;
   max-width: 960px;
   margin: 0 auto 30px; }
 
@@ -217,21 +267,19 @@ article {
   margin: 0 auto 30px; }
   @media (min-width: 48em) {
     .third-column {
-      grid-template-columns: 1fr 2fr; } }
+      grid-template-columns: 2fr 1fr; }
+      .third-column div + div {
+        border-left: 1px dashed #a9cfc0;
+        padding-left: 2em; } }
   @media (min-width: 48em) {
     .third-column h2 {
       grid-column-start: 1;
       grid-column-end: 3; } }
-  .third-column img {
-    max-height: 250px;
-    height: auto;
-    max-width: 100%;
-    object-fit: contain;
-    align-self: end;
-    margin-right: auto;
-    margin-left: auto;
-    grid-column: span 1; }
   .third-column p {
     line-height: 1.75rem; }
     .third-column p:first-child {
       margin-top: 0; }
+
+@media (min-width: 48em) {
+  .bounding-box {
+    border-bottom: 1px dashed #a9cfc0; } }

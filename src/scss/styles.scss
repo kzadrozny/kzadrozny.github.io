@@ -1,11 +1,11 @@
 @import "media.scss";
 
 $main-font: 'Open Sans', sans-serif;
+$accent-font: 'Lora', serif;
 
 $main-color: #333;
 $accent-color: #806e64;
 $pop-color: #477f68;
-$hero-tint: #315848;
 
 @mixin auto-image {
   height: auto;
@@ -54,9 +54,16 @@ h3 {
   font-size: 1.2em;
   font-weight: 100;
   margin-bottom: 0;
-    h2 + & {
-      margin-top: 0;
-    }
+  h2 + & {
+    margin-top: 0;
+  }
+  #resume & {
+    font-family: $accent-font;
+    margin-top: 2em;
+  }
+  //  .third-column & {
+  //   margin-top: 0.5em!important;
+  // }
 }
 
 h4 {
@@ -74,11 +81,25 @@ ul.plain-list {
   list-style: none;
   padding-left: 1.3em;
   li {
-    padding-left: 0;
+    padding-left: 0.25em;
     text-indent: -1.5em;
   }
   li + li {
     margin-top: 1em;
+  }
+}
+
+.descriptor {
+  font-family: $accent-font; 
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+.project-type {
+  @extend .descriptor;
+  color: $pop-color;
+  & + h3 {
+    margin-top: 0;
   }
 }
 
@@ -194,6 +215,7 @@ nav {
   h2 {
     grid-column-start: 1;
     grid-column-end: 3;
+    margin-bottom: 0;
     @include respond-to(small) {
       grid-column-start: 1;
       grid-column-end: 4;
@@ -213,25 +235,75 @@ article {
     }
   }
   h3 {
-    color: #fff;
-    background-color: rgba(20, 20, 20, 0.9);
-    position: absolute;
-    bottom: 5px;
-    padding: 10px 20px 10px;
-    a {
-      color: #fff;
-    }
+    margin-bottom: 0.5em;
   }
 }
 
 /*
- * Other Grids
+ * Section Styling
+ * --------------------------------------------------
+ */
+
+ #resume {
+  h3.first {
+    margin-top: 0;
+    @include respond-to(small) {
+      margin-top: 0.5em;
+    }
+  }
+  .pull-right {
+    display: block;
+    //font-style: italic;
+    font-size: 0.8rem;
+    @include respond-to(small) {
+      display: unset;
+      float: right;
+      padding-right: 1em;
+    }
+  }
+  .experience {
+    ul {
+      font-family: $accent-font;
+      li {
+        margin-bottom: 0.75em;
+      }
+    }
+  }
+  .sidebar {
+    h3 {
+      font-size: 1rem;
+    }
+    ul {
+      font-size: 0.8rem;
+    }
+  }
+}
+
+
+ #about {
+  h2 {
+    margin-bottom: 0;
+  }
+  img {
+    max-height: 250px;
+    padding: 1em 0 0 0;
+    @include respond-to(small) {
+      float: left;
+      padding: 1em 1em 1em 0;
+    }
+  }
+ }
+
+ section:last-child {
+  padding-bottom: 2em;
+ }
+
+ /*
+ * General Grids
  * --------------------------------------------------
  */
 
 .single-column {
-  display: grid;
-  grid-template-columns: 1fr;
   max-width: 960px;
   margin: 0 auto 30px;
 }
@@ -255,17 +327,17 @@ article {
   max-width: 960px;
   margin: 0 auto 30px;
   @include respond-to(small) {
-      grid-template-columns: 1fr 2fr;
+      grid-template-columns: 2fr 1fr;
+      div + div {
+        border-left: 1px dashed lighten($pop-color, 35%);
+        padding-left: 2em;
+      }
   }
   h2 {
     @include respond-to(small) {
       grid-column-start: 1;
       grid-column-end: 3;
     }
-  }
-  img {
-    max-height: 250px;  // need to work with this to be better on mobile
-    @include auto-image;
   }
   p {
     line-height: 1.75rem;
@@ -274,3 +346,9 @@ article {
     }
   }
 }
+
+.bounding-box {
+    @include respond-to(small) {
+      border-bottom: 1px dashed lighten($pop-color, 35%);
+    }
+  }
