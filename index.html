@@ -1,9 +1,3 @@
-<!-- 
-  Notes: Get interviews? 
-  Get screen shot of web exhibits - case study
-  How to do project titles? Just below seems to be best.
--->
-
 <!DOCTYPE html>
 <html>
   <head>
@@ -14,6 +8,8 @@
     <link rel="stylesheet" href="dist/css/styles.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:100,300,400,600,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="js/header-include.js"></script>
   </head>
   <body>
     <header>
@@ -36,59 +32,94 @@
       </section>
 
       <section class="cards" id="portfolio">
-        <h2>Portfolio</h2>
-          <article>
-            <span class="project-type">Front End Design</span>
-            <h3>University of Chicago Library</h3>
-            <a href="#">
-              <img style="width: 90%;" class="article-img" src="images/LibraryWebsiteRedesign.jpg" alt="Library website homepage" />
-            </a>
-          </article>
-        </a>
-
-          <article>
-            <span class="project-type">Corporate Rebranding</span>
-            <h3>The Great Escape</h3>
-            <a href="#">
-              <img class="article-img" src="images/t-TheGreatEscape.jpg" alt="Storefront for the Great Escape" />
-            </a>
+        <h2>Select Work</h2>
+          <article class="featured">
+            <span class="title-object">
+              <span class="project-type">UX &amp; Front End Design</span>
+              <h3>University of Chicago Library</h3>
+            </span>
+            <span class="img-object">
+              <a href="#">
+                <img style="object-position: 50% 30%" class="article-img" src="images/LibraryWebsiteRedesign-Tablet.jpg" alt="Library website homepage" />
+              </a>
+            </span>
           </article>
 
-          <article>
-            <span class="project-type">Non-profit Campaign</span>
-            <h3>The 21st Century Teacher</h3>
-            <a href="#">
-              <img class="article-img" src="images/ICEBanner.jpg" alt="ICE booklet cover" />
-            </a>
-          </article>
-
-          <article>
-            <span class="project-type">UI Design &amp; Architecture</span>
-            <h3>UChicago Library Catalog</h3>
+                    <article>
+            <span class="title-object">
+              <span class="project-type">UI Design &amp; System Integration</span>
+              <h3>UChicago Library Catalog</h3>
+            </span>
+            <span class="img-object">
             <a href="#">
               <img class="article-img" src="images/SFX-Redesign.jpg" alt="Tablet with Library article sources screen" />
             </a>
+          </span>
+          </article>
+
+          <article>
+            <span class="title-object">
+              <span class="project-type">Communication Design</span>
+              <h3>UChicago Library Exhibit &amp; Collection Integration</h3>
+            </span>
+            <span class="img-object">
+            <a href="#">
+              <img class="article-img" src="images/JamesBaldwinExhibit.jpg" alt="Storefront for the Great Escape" />
+            </a>
+          </span>
+          </article>
+
+          <article>
+            <span class="title-object">
+              <span class="project-type">Publication Design</span>
+              <h3>Black Metropolis Research Consortium</h3>
+            </span>
+            <span class="img-object">
+              <a href="#">
+                <img class="article-img" src="images/BMRC-Cover.jpg" alt="Front cover of BMRC annual report" />
+              </a>
+            </span>
+          </article>
+
+          <article>
+            <span class="title-object">
+              <span class="project-type">Non-profit Campaign</span>
+              <h3>Induction for the 21st Century Teacher</h3>
+            </span>
+            <span class="img-object">
+            <a href="p-ICE.html">
+              <img class="article-img" src="images/ICEBanner.jpg" alt="ICE booklet cover" />
+            </a>
+          </span>
           </article>
         
           <article>
-            <span class="project-type">Non-profit Branding</span>
-            <h3>Union Mission</h3>
-            <a href="#">
-              <img class="article-img" src="images/t-UnionMission.jpg" alt="Union Mission homepage" />
-            </a>
+            <span class="title-object">
+              <span class="project-type">Non-profit Branding</span>
+              <h3>Union Mission</h3>
+            </span>
+            <span class="img-object">
+              <a href="p-unionmission.html">
+                <img class="article-img" src="images/t-UnionMission.jpg" alt="Union Mission homepage" />
+              </a>
+            </span>
           </article>
 
-          <article>
-            <span class="project-type">Academic Campaign</span>
-            <h3>People to People</h3>
-            <a href="#">
-              <img class="article-img" src="images/t-PP.jpg" alt="Tote bage with 50th anniversary People to People logo" />
-            </a>
+          <article class="featured">
+            <span class="title-object">
+              <span class="project-type">Corporate Rebranding</span>
+              <h3>The Great Escape</h3>
+            </span>
+            <span class="img-object">
+              <a href="p-thegreatescape.html">
+                <img class="article-img" src="images/TheGreatEscape-storefront.jpg" alt="Storefront for the Great Escape" />
+              </a>
+            </span>
           </article>
-        </a>
+        
       </section>
 
-      <section  class="single-column" id="write">
+      <section class="single-column" id="write">
         <h2>Writing &amp; Teaching</h2>
           <h3>Publications</h3>
             <div class="two-column bounding-box">
@@ -144,8 +175,7 @@
 
       <section class="single-column" id="resume">
         <h2>Resume</h2>
-        <div class="third-column">
-          <div class="experience">
+          <div class="experience bounding-box">
             <h3 class="first">Experience</h3>
             <h4>Web Developer and Graphic Design Specialist</h4>
             University of Chicago Library <span class="pull-right">Chicago, IL | May 2015 - present</span>
@@ -191,8 +221,9 @@
             </ul>
           </div>
 
-          <div class="sidebar">
-            <h3 class="first">Volunteer &amp; Internships</h3>
+        <div class="third-column">
+          <div>
+            <h3>Volunteer &amp; Internships</h3>
             <ul class="plain-list">
               <li>Girls Who Code<br/>
               <span class="descriptor">Facilitator,  2016-2018</span></li>
@@ -204,11 +235,14 @@
               <span class="descriptor">Map Cataloger, June 2011–June 2012</span></li>
               <li>Chicago History Museum<br/>
               <span class="descriptor">Archives &amp; Manuscripts, June – August 2008</span></li>
-              <li>Jen Library, <span class="descriptor">Special Collections Department, March – May 2007</span></li>
+              <li>Jen Library<br/>
+                <span class="descriptor">Special Collections Department, March – May 2007</span></li>
               <li>Zegers DDB Worldwide<br/>
               <span class="descriptor">Graphic Design, August – November 2003</span></li>
             </ul>
+          </div>
 
+          <div class="sidebar">
             <h3>Skills</h3>
             <ul class="plain-list">
               <li>Sass, CSS, Python, HTML, XML, SQLite, JavaScript, JQuery, Git, and Heroku.</li>
@@ -216,14 +250,14 @@
               <li>Trained in MARC, EAD, DACS, CDWA, TEI, PREMIS, and Dublin Core.</li>
             </ul>
             
-            <h3>Publications</h3>
+ <!--            <h3>Publications</h3>
             <ul class="plain-list">
               <li>"Tell Imposter Syndrome to Take a Seat." In: <em>We Can Do I.T.: Women in Library Information Technology</em>, edited by Jenny Brandon, Sharon Ladenson, and Kelly Sattler, Library Juice Press, July 2018.
               </li>
               <li>
               "Learning UX in User-Centered Reading Groups." In: <em>User Experience in Libraries Yearbook 2017: stories, techniques, insights</em>, edited by Andy Priestner, 108-116. CreateSpace Independent Publishing Platform, 2017.
               </li>
-            </ul>
+            </ul> -->
 
             <h3>Education</h3>
             <ul class="plain-list">
@@ -243,7 +277,7 @@
         <img src="images/KathyPresenting_BW.jpg">
         <div>
           <p>Specializing in <span class="pop">user interfaces and accessibility</span> Kathy Zadrozny builds applications that serve patrons of all backgrounds and abilities. She crafts workshops and lectures that engage attendees in <span class="pop">creating accessible communities</span> within their work and institutions. Her lectures have taken her to worldwide conferences like Designing for Digital, UXLib, and Code4Lib.</p>
-          <p>She has <span class="pop">published chapters</span> in the books  <i>User Experience in Libraries Yearbook 2017: stories, techniques, insights</i> (2017) and <i>We Can Do I.T.: Women in Library Information Technology</i> (2018). In her spare time she teaches code to young women through the Girls Who Code program and manages the letter writing organization she co-founded in 2007, the Letter Writers Alliance.</p>
+          <p>She has <span class="pop">published chapters</span> in the books  <i>User Experience in Libraries Yearbook 2017: stories, techniques, insights</i> (2017) and <i>We Can Do I.T.: Women in Library Information Technology</i> (2018). In her spare time she <span class="pop">teaches code to young women</span> through the Girls Who Code program and manages the letter writing organization she co-founded in 2007, the Letter Writers Alliance.</p>
 
           <p>Kathy's projects have <span class="pop">garnered attention</span> from BBC World Service, NPR, <em>RedEye</em>, and <em>Gapers Block</em>. She has also been featured in the books <em>Good Mail Day</em>, and <em>Craft Business Heroes</em>.</p>
         </div>
