@@ -345,6 +345,9 @@ article {
   margin: 0 auto 30px;
   @include respond-to(small) {
       grid-template-columns: 2fr 1fr;
+      .object-page & {
+        grid-template-columns: 3fr 2fr;
+      }
       div + div {
         border-left: 1px dashed lighten($pop-color, 35%);
         padding-left: 2em;
@@ -361,6 +364,9 @@ article {
     &:first-child {
       margin-top: 0;
     }
+  }
+  .object-page & {
+    max-width: 1200px;
   }
 }
 
@@ -398,6 +404,12 @@ section.object-page {
     }
   }
   img {
-    max-width: 600px;
+    max-width: 700px;
+  }
+  ul {
+    padding-left: 20px;
+    li {
+      margin-bottom: 1em;
+    }
   }
 }

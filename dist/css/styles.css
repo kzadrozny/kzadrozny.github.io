@@ -282,6 +282,8 @@ section:last-child {
   @media (min-width: 48em) {
     .third-column {
       grid-template-columns: 2fr 1fr; }
+      .object-page .third-column {
+        grid-template-columns: 3fr 2fr; }
       .third-column div + div {
         border-left: 1px dashed #a9cfc0;
         padding-left: 2em; } }
@@ -293,6 +295,8 @@ section:last-child {
     line-height: 1.75rem; }
     .third-column p:first-child {
       margin-top: 0; }
+  .object-page .third-column {
+    max-width: 1200px; }
 
 @media (min-width: 48em) {
   .bounding-box {
@@ -320,4 +324,8 @@ section.object-page {
     section.object-page h2 + ul {
       margin-top: 0.5em; }
   section.object-page img {
-    max-width: 600px; }
+    max-width: 700px; }
+  section.object-page ul {
+    padding-left: 20px; }
+    section.object-page ul li {
+      margin-bottom: 1em; }
