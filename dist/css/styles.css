@@ -20,8 +20,17 @@ body {
   overflow: hidden;
   clip: rect(1px, 1px, 1px, 1px); }
 
+@media (max-width: 34em) {
+  .hidden-small {
+    display: none; } }
+
 main {
   margin-top: 2em; }
+
+a {
+  color: #2d6da4; }
+  a:visited {
+    color: #642D44; }
 
 /*
  * Fonts
@@ -114,19 +123,28 @@ nav {
   top: 0;
   width: 100%;
   box-shadow: 0px 0px 15px #000; }
+  nav .brand a {
+    font-family: "Lora", serif;
+    font-style: italic;
+    font-size: 1.1em;
+    color: #daebe4;
+    padding-top: 1em;
+    padding-left: 1em; }
+    nav .brand a:visited {
+      color: #daebe4; }
   nav ul {
+    padding-left: 1em;
     list-style: none;
     display: inline-flex; }
     nav ul li {
       padding-left: 2em; }
       nav ul li:first-child {
-        padding-left: 3em; }
-        @media (min-width: 48em) {
-          nav ul li:first-child {
-            padding-left: 7em; } }
+        padding-left: 0; }
   nav a {
     color: #eee;
     text-decoration: none; }
+    nav a:visited {
+      color: #eee; }
 
 /*
  * Hero
@@ -141,21 +159,23 @@ nav {
   color: #333;
   background: url("../../images/hero-slim.jpg") center #333 no-repeat;
   background-size: cover;
+  text-shadow: 0px 0px 15px #fff;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: inset 0 0 0 2000px rgba(128, 110, 100, 0.6); }
+  box-shadow: inset 0 0 0 2000px rgba(128, 110, 100, 0.6);
+  margin-top: 4em; }
   @media (min-width: 48em) {
     .hero {
-      height: 50px; } }
+      height: 50px;
+      margin-top: 0; } }
   .hero p {
-    margin-right: 60px;
     font-weight: 100;
     font-style: italic;
-    font-size: 1em; }
+    font-size: 1.2em; }
     @media (min-width: 48em) {
       .hero p {
-        font-size: 1.5em; } }
+        font-size: 1.7em; } }
 
 /*
  * Portfolio Grid
@@ -329,3 +349,14 @@ section.object-page {
     padding-left: 20px; }
     section.object-page ul li {
       margin-bottom: 1em; }
+
+figure {
+  margin: 0; }
+
+figcaption {
+  font-family: "Lora", serif;
+  font-size: 0.9rem;
+  font-style: italic;
+  padding: 0.5em 0 0.5em 1em;
+  margin-top: 1em;
+  background: #daebe4; }

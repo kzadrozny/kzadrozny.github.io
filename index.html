@@ -13,24 +13,25 @@
   </head>
   <body>
     <header>
-      <img src="images/logo.svg" alt="logo with monogram k z" />
+      <a class="mobile" href="#">&#9776;</a>
       <nav id="nav" role="navigation">
-        <h1 class="visually-hidden">Design Portfolio for Kathy Zadrozny</h1>
+        <span class="brand"><a href="index.html">Kathy Zadrozny</a></span>
         <ul>
           <li><a href="#portfolio">portfolio</a></li>
-          <li><a href="#write">writing &amp; teaching</a></li>
+          <li><a href="#write">writing<span class="hidden-small"> &amp; teaching</span></a></li>
           <li><a href="#resume">resume</a></li>
           <li><a href="#about">about</a></li>
-          <li><a href="#contact">contact</a></li>
+          <li class="hidden-small"><a href="#contact">contact</a></li>
         </ul>
+        <div style="clear:both;"></div>
       </nav>
     </header>
 
     <main>
       <section class="hero">
-        <div><p>design | accessibility | community</p></div>
+        <div aria-hidden="true"><p>design | accessibility | community</p></div>
       </section>
-
+      <h1 class="visually-hidden">Design Portfolio for Kathy Zadrozny</h1>
       <section class="cards" id="portfolio">
         <h2>Select Work</h2>
           <article class="featured">
@@ -52,7 +53,7 @@
             </span>
             <span class="img-object">
             <a href="p-uclibcatalog.html">
-              <img class="article-img" src="images/SFX-Redesign.jpg" alt="Tablet with Library article sources screen" />
+              <img class="article-img" src="images/Library-Catalog_Tablet.jpg" alt="Tablet with Library article sources screen" />
             </a>
           </span>
           </article>
@@ -243,6 +244,12 @@
           </div>
 
           <div class="sidebar">
+            <h3>Code Repositories</h3>
+            <ul class="plain-list">
+              <li><a href="https://github.com/kzadrozny/">Personal GitHub (kzadrozny)</a></li>
+              <li><a href="https://github.com/uchicago-library/">Organizational GitHub (uchicago-library)</a></li>
+              <li><a href="https://github.com/uchicago-library/uchicago-library.github.io/blob/master/docs/code-resources.md">My ADA Checklist &amp; Code Snippets</a></li>
+            </ul>
             <h3>Skills</h3>
             <ul class="plain-list">
               <li>Sass, CSS, Python, HTML, XML, SQLite, JavaScript, JQuery, Git, and Heroku.</li>
@@ -291,4 +298,6 @@
 
     </main>
   </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript" src="js/nav.min.js" ></script>
 </html>

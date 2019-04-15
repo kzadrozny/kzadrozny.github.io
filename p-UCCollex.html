@@ -23,17 +23,41 @@
                      <span class="descriptor">Template redesign, data migration, promotional marketing, and staff training.</span>
                 </span>
                 <div>
-                    <img src="images/WebExhibit-ChildPage.jpg">
-                    <img src="images/WebExhibit-HomePage.jpg">
-                    <img src="images/JamesBaldwinExhibit.jpg">
+                    <img src="images/WebExhibit-ChildPage_Laptop.jpg" alt="">
+                    <figure>
+                        <figcaption>Banner, color scheme, and sidebar can be customized</figcaption>
+                        <img src="images/WebExhibit-HomePage_Laptop.jpg" alt="">
+                    </figure>
+                    <figure>
+                        <figcaption>Banner design is expanded to all exhibit materials</figcaption>
+                        <img src="images/JamesBaldwinExhibit.jpg" alt="">
+                    </figure>
+                    <figure>
+                        <figcaption>Cohesive promotion, unique to the exhibit, is used for all medias.</figcaption>
+                        <img src="images/Balwin_SocialMedia.jpg" alt="">
+                    </figure>
+                    <!-- <img src="images/James-Baldwin_TechBarSlide.jpg" alt=""> -->
                 </div>
 
                 <div>
                     <h2>Problem</h2>
-                    <p></p>
+                    <p>Online exhibits were one-off microsites that involved creating new templates for each exhibit. This required expansive developer time and made the curators feel helpless in the creation of their exhibit. Separate templates also created incongruities between exhibits, leaving users confused when navigating between them. Information between exhibits was also siloed, not allowing us to easily connected to related collections or materials.</p>
+                    <p>Promotion for exhibits was normally non-existent or rarely matched the style for the exhibit itself. Since curators didn't understand the process for creating the web pages, they did not feel empowered to make edits or add materials.</p>
                     <h2>Solution</h2>
                     <ul>
-                        <li></li>
+                        <li>Our website base template was expanded upon to accommodate the unique needs of web exhibits, such as larger images, expansive captioning, and unique color pallets.</li>
+                        <li>Using <span class="highlight">Sass shade and tint variations</span>, the curator is able to input one color hex in the CMS form and the Sass code will produce a color scheme for the entire web exhibit.</li>
+                        <li>Sass-powered <span class="highlight">dynamic styling</span> allows for each exhibit to have a unique look, while maintaining the Library's branding and style guidelines.</li>
+                        <li>The expanded templates allows for a hero image that <span class="highlight">creates a mood for the exhibit</span>, which is then reused in promotional materials.</li>
+                        <li>Sidebar navigation allows users to navigate within the exhibit while still having the main Library website at the top and bottom, orienting them and branding the work as a University exhibit.</li>
+                        <li>I <span class="highlight">led training sessions</span> for Curators and Librarians on how to create web exhibits using the new templates, as well as workshops on writing for the web, and organizing visual content for social media.</li>
+                        <li>The right sidebar includes related materials to the exhibit that are <span class="highlight">automatically populated</span> by matching the subject assignments for the exhibit.</li>
+                    </ul>
+                    <h2>Impact</h2>
+                    <ul>
+                        <li>The easier to use templates, simplified design creation, and training sessions helped make the <span class="highlight">curators feel empowered</span> to create their online exhibits are they wanted.</li>
+                        <li>Creating subject snippets as the connection between collections and exhibits has <span class="highlight">increased cross-material browsing</span> on the website. It also showcases the diversity of the Library's collections.</li>
+                        <li>A <span class="highlight">unified branding campaign</span> for each exhibit allows for recognizable and consistent materials across all platforms that are unique for each exhibit.</li>
                     </ul>
                     <h2>Roles</h2>
                     <ul class="plain-list">
@@ -48,6 +72,10 @@
                         <li>Django</li>
                         <li>HTML</li>
                         <li>JavaScript</li>
+                    </ul>
+                    <h2>Code Example</h2>
+                    <ul class="plain-list">
+                        <li><a href="https://github.com/uchicago-library/library_website/blob/master/lib_collections/templates/lib_collections/exhibit_page.html">Web Exhibit Parent Page</a> (GitHub)</li>
                     </ul>
                 </div>
 
