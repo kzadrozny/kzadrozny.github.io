@@ -220,7 +220,7 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: right bottom;
-  box-shadow: inset 0 0 0 2000px rgba(128, 110, 100, 0.8);
+  box-shadow: inset 0 0 0 2000px rgba(71,127,104, 0.85);
 	color: #FDFDFB;
   width:170px;
   float:left;
